@@ -36,7 +36,7 @@ spec:
         \ openshiftDeploy(namespace: 'production',\n  \t\t\t     deploymentConfig:
         'myapp',\n\t\t\t     waitTime: '300000')\n  \n  openshiftScale(namespace:
         'production',\n  \t\t\t     deploymentConfig: 'myapp',\n\t\t\t     waitTime:
-        '300000',\n\t\t\t     replicaCount: '2')\n  \n  stage 'verify deploy in production'\n
+        '300000',\n\t\t\t     replicaCount: '10')\n  \n  stage 'verify deploy in production'\n
         \ openshiftVerifyDeployment(namespace: 'production',\n\t\t\t\t       depCfg:
         'myapp',\n\t\t\t\t       replicaCount:'10',\n\t\t\t\t       verifyReplicaCount:
         'true',\n\t\t\t\t       waitTime: '300000')\n}"
